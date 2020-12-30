@@ -14,7 +14,8 @@ jobs:
       - name: run kics Scan
         uses: checkmarx/kics-action@v1.0
         with:
-          directory: 'assets/queries'
+          path: 'assets/queries'
+          output_path: 'results.json'
       - name: display kics results
         run: |
           cat results.json
