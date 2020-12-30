@@ -1,0 +1,18 @@
+name: Build
+on:
+  push:
+    branches:
+      - test-github-action
+jobs:
+  kics-scan:
+    name: kics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: kics Scan
+        uses: checkmarx/kics-action@master
+        with:
+          directory: '${PWD}/assets/queries'
+    
