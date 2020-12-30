@@ -17,4 +17,4 @@ jobs:
           directory: 'assets/queries'
       - name: display kics results
         run: |
-          cat ${PWD}/result.json
+          cat results.json
