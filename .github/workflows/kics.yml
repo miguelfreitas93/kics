@@ -14,5 +14,5 @@ jobs:
       - name: kics Scan
         uses: checkmarx/kics-action@master
         with:
-          directory: '${PWD}/assets/queries'
+          directory: 'assets/queries'
     
